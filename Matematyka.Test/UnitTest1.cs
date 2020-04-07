@@ -5,11 +5,14 @@ namespace Matematyka.Test
 {
     public class Matematyka_IsPrimeNumber_Should
     {
-        [Fact]
-        public void IsPrimeNumber_Input1_ReturnFalse()
+        [Theory]
+        [InlineData(-1)]
+        [InlineData(0)]
+        [InlineData(1)]
+        public void IsPrimeNumber_InputLessThan2_ReturnFalse(int value)
         {
-            var result = Math.IsPrimeNumber(1);
-            Assert.False(result, "1 should not be a prime number!");
+            var result = Math.IsPrimeNumber(value);
+            Assert.False(result, $"{value} should not be a prime number!");
         }
     }
 }
