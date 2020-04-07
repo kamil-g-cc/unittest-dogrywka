@@ -6,7 +6,7 @@ namespace Matematyka
     {
         public static bool IsPrimeNumber(int candidate)
         {
-            if(candidate == 1){
+            if(candidate < 2){
                 return false;
             }
             throw new NotImplementedException("Not implemented");
